@@ -19,8 +19,8 @@ FROM
               FROM fairbot_suggests_success
               WHERE date_suggest
                 BETWEEN
-                  NOW() - interval 20 MINUTE
+                  NOW() - INTERVAL 20 MINUTE
                 AND
-                  NOW() - interval 10 MINUTE)
+                  NOW() - INTERVAL 10 MINUTE)
       )
   AS 'k') AS s
